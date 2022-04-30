@@ -2,5 +2,5 @@
 
 
 ## Commands
-- docker-compose up -> starts the dev server
-- docker-compose down -> 
+- docker-compose up 
+- docker-compose down 
