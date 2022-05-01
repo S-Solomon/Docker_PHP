@@ -27,6 +27,6 @@ class Transaction
     
     private function sendEmail()
     {
-        
+        return true;
     }
 }
