@@ -5,14 +5,13 @@
 // require_once '../app/PaymentGateway/Paddle/CustomerProfile.php';
 // require_once '../app/PaymentGateway/Paddle/Transaction.php';
 
-require __DIR__ . '/../vendor/autoload.php';
-
 use App\PaymentGateway\Paddle\Transaction;
 
-$paddleTransaction = new Transaction();
+require_once __DIR__ . '/../vendor/autoload.php';
 
-$id = new \Ramsey\Uuid\UuidFactory();
+$transaction = new Transaction();
+$transaction->setStatus(Transaction::STATUS_PAID);
+var_dump($transaction);
 
-echo $id->uuid4();
-
-var_dump($paddleTransaction);
+// $id = new \Ramsey\Uuid\UuidFactory();
+// echo $id->uuid4();
