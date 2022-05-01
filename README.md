@@ -4,7 +4,10 @@
 
 ## Commands
 - docker-compose up 
-- docker-compose down 
+- docker-compose down
+
+- composer dump-autoload
+- composer dump-autoload -o
 
 ## Note
 This setup is for development and not fully configured for production
