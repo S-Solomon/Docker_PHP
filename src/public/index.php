@@ -9,9 +9,8 @@ use App\PaymentGateway\Paddle\Transaction;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$transaction = new Transaction();
-$transaction->setStatus(Transaction::STATUS_PAID);
-var_dump($transaction);
+$transaction = new Transaction(14, 'first transaction');
+
 
 // $id = new \Ramsey\Uuid\UuidFactory();
 // echo $id->uuid4();
