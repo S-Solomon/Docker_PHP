@@ -2,7 +2,7 @@
 - Basis setup of docker with php using:
 - nginx as web server
 
-## Commands
+## Useful commands
 - docker-compose up 
 - docker-compose down
 - docker-compose up -d --build (rebuilds our image)
