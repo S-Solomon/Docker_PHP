@@ -34,6 +34,6 @@ class Transaction {
 
     public function __destruct()
     {
-        
+        echo 'Destruct' .$this->description .  '<br />';
     }
 }
