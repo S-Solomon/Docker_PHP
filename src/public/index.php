@@ -1,19 +1,12 @@
 <?php
 
-declare(strict_types=1);
+require_once '../app/PaymentGateway/Stripe/Transaction.php';
+require_once '../app/Notification/Email.php';
+require_once '../app/PaymentGateway/Paddle/CustomerProfile.php';
+require_once '../app/PaymentGateway/Paddle/Transaction.php';
 
-require_once '../Transactions.php';
+use App\PaymentGateway\Paddle\Transaction;
 
-use PaymentGateway\Stripe\Transaction;
+$paddleTransaction = new Transaction();
 
-// CLASSES AND OBJECTS
-$amount = (new Transaction(100, 'Transaction 1'))
-    ->addTax(8)
-    ->applyDiscount(10)
-    ->getAmount();
-    
-
-
-
-    
-var_dump($amount);
+var_dump($paddleTransaction);
