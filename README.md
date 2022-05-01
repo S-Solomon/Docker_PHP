@@ -9,7 +9,7 @@
 - composer dump-autoload
 - composer dump-autoload -o
 
-- docker exec -it **container name** bash (goes opens up in the container)
+- docker exec -it **container name** bash (opens up in the container in bash)
 
 ## Note
 This setup is for development and not fully configured for production
