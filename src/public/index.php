@@ -9,8 +9,11 @@ use App\PaymentGateway\Paddle\Transaction;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$transaction = new Transaction(25);
-$transaction->process();
+// $transaction = new Transaction(25);
+// $transaction->process();
 
-// $id = new \Ramsey\Uuid\UuidFactory();
-// echo $id->uuid4();
+$dateTime = new DateTime();
+echo $dateTime->getTimezone()->getName() . ' - ' . $dateTime->format('m/d/Y g:i A'). PHP_EOL;
+
+$dateTime->setTimezone(new DateTimeZone('Europe/London'));
+echo $dateTime->getTimezone()->getName() . ' - ' . $dateTime->format('m/d/Y g:i A'). PHP_EOL;
