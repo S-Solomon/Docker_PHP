@@ -25,4 +25,4 @@ $router->register(
     }
 );
 
-echo $router->resolve($_SERVER['REQUEST_URI']);
+echo $router->resolve($_SERVER['REQUEST_URI'], strtolower($_SERVER['REQUEST_METHOD']));
