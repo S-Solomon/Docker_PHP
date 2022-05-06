@@ -97,5 +97,15 @@ class RouterTest extends Testcase
         ];
     }
 
+    /** @test */
+    public function it_resolves_route_from_a_closure(): void
+    {
+        $this->router->get('/users', fn () => [1, 2, 3]);
+
+        $this->assertSame(
+            [1, 2, 3],
+            $this->router->resolve('/users', 'get')
+        );
+    }
 
 }
