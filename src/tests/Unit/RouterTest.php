@@ -42,4 +42,19 @@ class RouterTest extends Testcase
         $this->assertSame($expected, $this->router->routes());
     }
 
+    /** @test */
+    public function it_registers_a_post_route(): void
+    {
+        $this->router->post('/users', ['Users', 'store']);
+
+        $expected = [
+            'post' => [
+                '/users' => ['Users', 'store'],
+            ],
+        ];
+
+        $this->assertSame($expected, $this->router->routes());
+    }
+
+
 }
