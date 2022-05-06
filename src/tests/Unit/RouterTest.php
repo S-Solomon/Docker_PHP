@@ -27,4 +27,19 @@ class RouterTest extends Testcase
         // then we asset the route was registered
         $this->assertEquals($expected, $router->routes());
     }
+
+    /** @test */
+    public function it_registers_a_get_route(): void
+    {
+        $this->router->get('/users', ['Users', 'index']);
+
+        $expected = [
+            'get' => [
+                '/users' => ['Users', 'index'],
+            ],
+        ];
+
+        $this->assertSame($expected, $this->router->routes());
+    }
+
 }
