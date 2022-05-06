@@ -108,4 +108,23 @@ class RouterTest extends Testcase
         );
     }
 
+
+    /** @test */
+    public function it_resolves_route(): void
+    {
+        $users = new class()
+        {
+            public function index(): array
+            {
+                return [1, 2, 3];
+            }
+        };
+
+        $this->router->get('/users', [$users::class, 'index']);
+
+        $this->assertSame(
+            [1, 2, 3],
+            $this->router->resolve('/users', 'get')
+        );
+    }
 }
