@@ -10,6 +10,13 @@ use PHPUnit\Framework\TestCase;
 class RouterTest extends Testcase
 {
     /** @test */
+    public function there_are_no_routes_when_router_is_created(): void
+    {
+        $this->assertEmpty((new Router())->routes());
+    }
+
+    
+    /** @test */
     public function it_registers_a_route(): void 
     {
         // given that we have a router object
